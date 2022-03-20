@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, FlatList, Image } from "react-native";
 import yelp from "../api/yelp";
+import Loading from "../components/Loading";
 
 const ResultsShowScreen = ({ navigation }) => {
   const [result, setResult] = useState(null);
@@ -15,7 +16,7 @@ const ResultsShowScreen = ({ navigation }) => {
     getResult(id);
   }, []);
 
-  if (!result) return null;
+  if (!result) return <Loading />;
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{result.name}</Text>

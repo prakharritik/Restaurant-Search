@@ -15,13 +15,14 @@ export default () => {
         },
       });
       setResults(response.data.businesses);
+      setErrorMessage("");
     } catch (err) {
       setErrorMessage("Something went wrong.");
     }
   };
 
   useEffect(() => {
-    searchApi("pasta");
+    searchApi("tea");
   }, []);
 
   return [searchApi, results, errorMessage];
