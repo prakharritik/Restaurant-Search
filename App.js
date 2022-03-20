@@ -10,6 +10,7 @@ const navigator = createStackNavigator(
     initialRouteName: "Search",
     defaultNavigationOptions: {
       title: "Business Search",
+      cardStyle: { backgroundColor: "#fff" },
     },
   }
 );
